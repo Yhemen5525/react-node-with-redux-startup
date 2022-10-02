@@ -7,13 +7,13 @@ app = express();
 if (true) {
   app.use(express.static(path.join(__dirname, "../frontend/build")));
 
+  app.get("/test", (req, res) => {
+    res.send("test rout is working");
+  });
+
   app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "../frontend/build/index.html"));
   });
 }
-
-app.get("/test", (req, res) => {
-  res.send("test rout is working");
-});
 
 module.exports = app;

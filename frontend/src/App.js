@@ -1,7 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+/** @format */
+
+import logo from "./logo.svg";
+import axios from "axios";
+import "./App.css";
 
 function App() {
+  alert("about to axios ");
+  axios("/test")
+    .then((res) => {
+      console.log(res);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+
   return (
     <div className="App">
       <header className="App-header">
