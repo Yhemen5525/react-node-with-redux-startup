@@ -19,8 +19,9 @@ app.get("/users", (req, res) => {
 });
 
 // Setting up config file
-if (process.env.NODE_ENV !== "PRODUCTION")
+if (process.env.NODE_ENV !== "PRODUCTION") {
   require("dotenv").config({ path: "backend/config/config.env" });
+}
 
 if (process.env.NODE_ENV === "PRODUCTION") {
   app.use(express.static(path.join(__dirname, "../frontend/build")));
