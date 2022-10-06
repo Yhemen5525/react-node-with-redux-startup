@@ -5,6 +5,7 @@ import axios from "axios";
 import "./App.css";
 
 import CakeContainer from "./component/CakeContainer";
+import UsersContainer from "./component/UsersContainer";
 
 function App() {
   axios("/test")
@@ -18,6 +19,7 @@ function App() {
   return (
     <div className="App">
       <CakeContainer />
+      <UsersContainer />
     </div>
   );
 }
