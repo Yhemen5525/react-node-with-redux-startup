@@ -18,7 +18,7 @@ app.get("/users", (req, res) => {
   res.send(USERS);
 });
 
-// Setting up config file
+// Setting up config   file
 if (process.env.NODE_ENV !== "PRODUCTION") {
   require("dotenv").config({ path: "backend/config/config.env" });
 }
